@@ -19,7 +19,7 @@ def from_slashing_probability_to_slashing_array(slash: np.ndarray, T_max: int) -
 def getBlockReward(T_max: int) -> np.ndarray:
     init = np.ones(T_max)
     for i in range(10):
-        init[i * T_max // 10: min((i + 1) * T_max // 10, T_max)] = 11 - i
+        init[i * T_max // 10: min((i + 1) * T_max // 10, T_max)] = 110 - i * 10
     return init
 
 def init_stakes_issued(size: int):

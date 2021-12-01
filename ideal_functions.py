@@ -100,14 +100,15 @@ def loop(lambda_stake, lambda_collateral, lambda_borrow, lambda_slash, size, T_m
     return stakes, loans, borrowing_array, phi
 
 def main():
-    lambda_stake = 1
-    lambda_collateral = 1
+    lambda_stake = 50
+    lambda_collateral = .75
     lambda_borrow = 1
     lambda_slash = 1
     size = 100
     T_max = 1000
-    iota = .1
+    iota = 0.1
     epoch_time = 1
+    
     stakes, loans, borrowing_array, phi = loop(lambda_stake, lambda_collateral, lambda_borrow, lambda_slash, size, T_max, iota, epoch_time)
 
 if __name__ == "__main__":
